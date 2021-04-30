@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.rinatisk.txtclanguage.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.rinatisk.txtclanguage.MyBundle
 
 class MyApplicationService {
 
