@@ -7,9 +7,16 @@
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
+
     <extensions defaultExtensionNs="com.intellij">
+        <lang.parserDefinition language="Simple"
+                               implementationClass="com.github.rinatisk.txtclanguage.language.SimpleParserDefinition"/>
+        <completion.contributor language="Simple"
+                                implementationClass="com.github.rinatisk.txtclanguage.language.SimpleCompletionContributor"/>
         <applicationService serviceImplementation="com.github.rinatisk.txtclanguage.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.rinatisk.txtclanguage.services.MyProjectService"/>
+        <fileType name="Simple File" implementationClass="com.github.rinatisk.txtclanguage.language.SimpleFileType"
+                  fieldName="INSTANCE" language="Simple" extensions="simple"/>
     </extensions>
 
     <applicationListeners>

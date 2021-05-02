@@ -4,6 +4,7 @@ import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 fun properties(key: String) = project.findProperty(key).toString()
+sourceSets["main"].java.srcDirs("src/main/gen")
 
 plugins {
     // Java support
