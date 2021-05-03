@@ -30,6 +30,7 @@ repositories {
     jcenter()
 }
 dependencies {
+    implementation ("com.beust:klaxon:5.5")
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.16.0")
 }
 
