@@ -6,6 +6,7 @@ import com.intellij.codeInsight.lookup.LookupElementBuilder
 import com.intellij.patterns.PlatformPatterns
 import com.intellij.util.ProcessingContext
 import org.intellij.sdk.language.psi.SimpleTypes
+import java.io.File
 
 
 class SimpleCompletionContributor : CompletionContributor() {
@@ -18,10 +19,16 @@ class SimpleCompletionContributor : CompletionContributor() {
                      context: ProcessingContext,
                      result: CompletionResultSet
                 ) {
-                    result.addElement(LookupElementBuilder.create("Hello"))
+                  //  setOf(File("/usr/share/dict/american-english").readLines().filter { it.startsWith("He") }))
+                    val words = File("/usr/share/dict/american-english").readLines().filter { (it.startsWith(parameters.position.text)) }
+
+                    result.addAllElements(words.map { LookupElementBuilder.create(it) } )
+
+
                 }
 
             }
         )
     }
 }
+
