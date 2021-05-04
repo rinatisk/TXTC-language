@@ -17,10 +17,10 @@ import java.math.BigInteger
 
 
 fun main() {
-    val words = File("/home/rinatisk/Downloads/data(2).txt").readText()
+    val words = File("/home/rinatisk/Downloads/data(2).json").readText()
     val wordsWithUses = Klaxon().parseArray<Map<String, String>>(words)
     val wordsMap = wordsWithUses?.map { it.values }
-    println(wordsMap?.last()?.toSet()?.last())
+    println("50003612".toInt())
     //print(wordsWithUses?.map { it.values })
 }
 
@@ -34,16 +34,12 @@ class SimpleCompletionContributor : CompletionContributor() {
                      context: ProcessingContext,
                      result: CompletionResultSet
                 ) {
-                    println(parameters.position.text.dropLast(20))
-                  //  setOf(File("/usr/share/dict/american-english").readLines().filter { it.startsWith("He") }))
-                    val wordsFile = File("/home/rinatisk/Downloads/data(2).txt").readText()
+                    val wordsFile = File("/home/rinatisk/Downloads/data(2).json").readText()
                     val wordsWithUses = Klaxon().parseArray<Map<String, String>>(wordsFile)
                     val wordsMap = wordsWithUses?.map { it.values }
                     val words = wordsMap?.filter { (it.toSet().last().startsWith(parameters.position.text.dropLast(20))) }?.map { it.toSet() }?.sortedByDescending { it.first() }
-                    println(words)
-                    words?.map { PrioritizedLookupElement.withPriority(LookupElementBuilder.create(it.last()).appendTailText(it.first(), false), it.first().toDouble()) }
+                    words?.map { PrioritizedLookupElement.withPriority(LookupElementBuilder.create(it.last()).appendTailText(it.first(), false), it.first().toInt().div(100).toDouble()) }
                         ?.let { result.addAllElements(it) }
-
 
                 }
 
