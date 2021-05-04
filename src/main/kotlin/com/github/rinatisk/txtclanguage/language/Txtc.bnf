@@ -1,0 +1,20 @@
+{
+  parserClass="com.github.rinatisk.txtclanguage.language.parser.TxtcParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Txtc"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.intellij.sdk.language.com.github.rinatisk.txtclanguage.language.psi"
+  psiImplPackage="com.github.rinatisk.txtclanguage.language.psi.impl"
+
+  elementTypeHolderClass="com.github.rinatisk.txtclanguage.language.psi.TxtcTypes"
+  elementTypeClass="org.intellij.sdk.language.com.github.rinatisk.txtclanguage.language.psi.TxtcElementType"
+  tokenTypeClass="org.intellij.sdk.language.com.github.rinatisk.txtclanguage.language.psi.TxtcTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= property
+
+property ::= (VALUE? WHITE_SPACES VALUE?) | VALUE

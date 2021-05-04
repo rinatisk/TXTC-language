@@ -1,13 +1,13 @@
 package com.github.rinatisk.txtclanguage.language;
 
 import com.intellij.lexer.FlexLexer;
-import com.intellij.psi.tree.IElementType;
-import com.github.rinatisk.txtclanguage.psi.SimpleTypes;
-import com.intellij.psi.TokenType;
+import com.intellij.com.github.rinatisk.txtclanguage.language.psi.tree.IElementType;
+import com.github.rinatisk.txtclanguage.com.github.rinatisk.txtclanguage.language.psi.SimpleTypes;
+import com.intellij.com.github.rinatisk.txtclanguage.language.psi.TokenType;
 
 %%
 
-%class SimpleLexer
+%class TxtcLexer
 %implements FlexLexer
 %unicode
 %function advance
@@ -23,7 +23,7 @@ VALUE_CHARACTER=[^\ \ | \t \n\f\\] | "\\"{CRLF} | "\\".
 
 %%
 
-<YYINITIAL> {VALUE_CHARACTER}+                                { yybegin(YYINITIAL); return SimpleTypes.VALUE; }
+<YYINITIAL> {VALUE_CHARACTER}+                                { yybegin(YYINITIAL); return TxtcTypes.VALUE; }
 
 <WAITING_VALUE> {CRLF}({CRLF}|{WHITE_SPACE})+               { yybegin(YYINITIAL); return TokenType.WHITE_SPACE; }
 

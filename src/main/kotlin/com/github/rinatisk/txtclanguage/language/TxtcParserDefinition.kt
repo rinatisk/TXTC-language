@@ -13,13 +13,14 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.TokenType
 import com.intellij.psi.tree.IFileElementType
 import com.intellij.psi.tree.TokenSet
-import org.intellij.sdk.language.parser.SimpleParser
-import org.intellij.sdk.language.psi.SimpleTypes
+import com.github.rinatisk.txtclanguage.language.parser.TxtcParser
+import com.github.rinatisk.txtclanguage.language.psi.TxtcTypes
+import com.github.rinatisk.txtclanguage.language.psi.TxtcFile
 
 
-class SimpleParserDefinition : ParserDefinition {
+class TxtcParserDefinition : ParserDefinition {
     override fun createLexer(project: Project): Lexer {
-        return SimpleLexerAdapter()
+        return TxtcLexerAdapter()
     }
 
     override fun getWhitespaceTokens(): TokenSet {
@@ -35,7 +36,7 @@ class SimpleParserDefinition : ParserDefinition {
     }
 
     override fun createParser(project: Project): PsiParser {
-        return SimpleParser()
+        return TxtcParser()
     }
 
     override fun getFileNodeType(): IFileElementType {
@@ -43,7 +44,7 @@ class SimpleParserDefinition : ParserDefinition {
     }
 
     override fun createFile(viewProvider: FileViewProvider): PsiFile {
-        return SimpleFile(viewProvider)
+        return TxtcFile(viewProvider)
     }
 
     override fun spaceExistenceTypeBetweenTokens(left: ASTNode, right: ASTNode): SpaceRequirements {
@@ -51,11 +52,11 @@ class SimpleParserDefinition : ParserDefinition {
     }
 
     override fun createElement(node: ASTNode): PsiElement {
-        return SimpleTypes.Factory.createElement(node)
+        return TxtcTypes.Factory.createElement(node)
     }
 
     companion object {
         val WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE)
-        val FILE = IFileElementType(SimpleLanguage.INSTANCE)
+        val FILE = IFileElementType(TXTCLanguage.INSTANCE)
     }
 }

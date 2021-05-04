@@ -1,19 +1,12 @@
 package com.github.rinatisk.txtclanguage.language
 
-import com.beust.klaxon.JsonArray
-import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Klaxon
-import com.esotericsoftware.kryo.NotNull
 import com.intellij.codeInsight.completion.*
-import com.intellij.codeInsight.lookup.AutoCompletionPolicy
 import com.intellij.codeInsight.lookup.LookupElementBuilder
 import com.intellij.patterns.PlatformPatterns
 import com.intellij.util.ProcessingContext
-import com.intellij.util.withNotNullBackup
-import com.jetbrains.rd.util.first
-import org.intellij.sdk.language.psi.SimpleTypes
+import com.github.rinatisk.txtclanguage.language.psi.TxtcTypes
 import java.io.File
-import java.math.BigInteger
 
 
 fun main() {
@@ -24,10 +17,10 @@ fun main() {
     //print(wordsWithUses?.map { it.values })
 }
 
-class SimpleCompletionContributor : CompletionContributor() {
+class TxtcCompletionContributor : CompletionContributor() {
     init {
         extend(
-            CompletionType.BASIC, PlatformPatterns.psiElement(SimpleTypes.VALUE),
+            CompletionType.BASIC, PlatformPatterns.psiElement(TxtcTypes.VALUE),
             object : CompletionProvider<CompletionParameters?>() {
                 override fun addCompletions(
                      parameters: CompletionParameters,

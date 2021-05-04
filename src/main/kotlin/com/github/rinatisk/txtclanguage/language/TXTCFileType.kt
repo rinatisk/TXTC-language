@@ -1,44 +1,44 @@
 package com.github.rinatisk.txtclanguage.language
 
-import com.intellij.icons.AllIcons
 import com.intellij.lang.Language
 import com.intellij.openapi.fileTypes.LanguageFileType
+import com.intellij.openapi.util.IconLoader
 import javax.swing.Icon
 
 
-class SimpleLanguage : Language("Simple") {
+class TXTCLanguage : Language("TXTC") {
     companion object {
-        val INSTANCE = SimpleLanguage()
+        val INSTANCE = TXTCLanguage()
     }
 }
 
 
-class SimpleFileType private constructor() : LanguageFileType(SimpleLanguage.INSTANCE) {
+class TxtcFileType private constructor() : LanguageFileType(TXTCLanguage.INSTANCE) {
     override fun getName(): String {
-        return "Simple File"
+        return "Txtc File"
     }
 
     override fun getDescription(): String {
-        return "Simple language file"
+        return "TXTC language file"
     }
 
     override fun getDefaultExtension(): String {
-        return "simple"
+        return "TXTC"
     }
 
     override fun getIcon(): Icon {
-        return SimpleIcons.FILE
+        return TxtcIcons.FILE
     }
 
     companion object {
-        val INSTANCE = SimpleFileType()
+        val INSTANCE = TxtcFileType()
     }
 }
 
 
-class SimpleIcons {
+class TxtcIcons {
     companion object {
         @JvmField
-        val FILE = AllIcons.Actions.QuickfixOffBulb
+        val FILE = IconLoader.getIcon("/icons/icon.svg")
     }
 }

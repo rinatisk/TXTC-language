@@ -9,18 +9,18 @@
 
 
     <extensions defaultExtensionNs="com.intellij">
-        <lang.parserDefinition language="Simple"
-                               implementationClass="com.github.rinatisk.txtclanguage.language.SimpleParserDefinition"/>
-        <completion.contributor language="Simple"
-                                implementationClass="com.github.rinatisk.txtclanguage.language.SimpleCompletionContributor"/>
-        <applicationService serviceImplementation="com.github.rinatisk.txtclanguage.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.rinatisk.txtclanguage.services.MyProjectService"/>
-        <fileType name="Simple File" implementationClass="com.github.rinatisk.txtclanguage.language.SimpleFileType"
-                  fieldName="INSTANCE" language="Simple" extensions="simple"/>
+        <lang.parserDefinition language="TXTC"
+                               implementationClass="com.github.rinatisk.txtclanguage.language.TxtcParserDefinition"/>
+        <completion.contributor language="TXTC"
+                                implementationClass="com.github.rinatisk.txtclanguage.language.TxtcCompletionContributor"/>
+        <applicationService serviceImplementation="com.github.rinatisk.txtclanguage.services.ApplicationService"/>
+        <projectService serviceImplementation="com.github.rinatisk.txtclanguage.services.ProjectService"/>
+        <fileType name="TXTC File" implementationClass="com.github.rinatisk.txtclanguage.language.TxtcFileType"
+                  fieldName="INSTANCE" language="TXTC" extensions="txtc"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.rinatisk.txtclanguage.listeners.MyProjectManagerListener"
+        <listener class="com.github.rinatisk.txtclanguage.listeners.ProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
