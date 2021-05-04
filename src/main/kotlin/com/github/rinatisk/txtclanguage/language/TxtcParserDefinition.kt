@@ -1,6 +1,5 @@
 package com.github.rinatisk.txtclanguage.language
 
-
 import com.intellij.lang.ASTNode
 import com.intellij.lang.ParserDefinition
 import com.intellij.lang.ParserDefinition.SpaceRequirements
@@ -16,7 +15,6 @@ import com.intellij.psi.tree.TokenSet
 import com.github.rinatisk.txtclanguage.language.parser.TxtcParser
 import com.github.rinatisk.txtclanguage.language.psi.TxtcTypes
 import com.github.rinatisk.txtclanguage.language.psi.TxtcFile
-
 
 class TxtcParserDefinition : ParserDefinition {
     override fun createLexer(project: Project): Lexer {

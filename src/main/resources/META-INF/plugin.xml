@@ -15,7 +15,7 @@
                                 implementationClass="com.github.rinatisk.txtclanguage.language.TxtcCompletionContributor"/>
         <applicationService serviceImplementation="com.github.rinatisk.txtclanguage.services.ApplicationService"/>
         <projectService serviceImplementation="com.github.rinatisk.txtclanguage.services.ProjectService"/>
-        <fileType name="TXTC File" implementationClass="com.github.rinatisk.txtclanguage.language.TxtcFileType"
+        <fileType name="txtc File" implementationClass="com.github.rinatisk.txtclanguage.language.TxtcFileType"
                   fieldName="INSTANCE" language="TXTC" extensions="txtc"/>
     </extensions>
 

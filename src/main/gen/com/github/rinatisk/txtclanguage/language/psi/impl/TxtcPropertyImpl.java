@@ -2,14 +2,13 @@
 package com.github.rinatisk.txtclanguage.language.psi.impl;
 
 import java.util.List;
+
+import com.github.rinatisk.txtclanguage.language.psi.TxtcProperty;
+import com.github.rinatisk.txtclanguage.language.psi.TxtcVisitor;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
-import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.intellij.psi.util.PsiTreeUtil;
-import static com.github.rinatisk.txtclanguage.language.psi.TxtcTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
-import org.intellij.sdk.language.com.github.rinatisk.txtclanguage.language.psi.*;
 
 public class TxtcPropertyImpl extends ASTWrapperPsiElement implements TxtcProperty {
 
