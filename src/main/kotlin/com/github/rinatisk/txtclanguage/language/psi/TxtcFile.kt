@@ -1,7 +1,7 @@
 package com.github.rinatisk.txtclanguage.language.psi
 
-import com.github.rinatisk.txtclanguage.language.TxtcFileType
 import com.github.rinatisk.txtclanguage.language.TXTCLanguage
+import com.github.rinatisk.txtclanguage.language.TxtcFileType
 import com.intellij.extapi.psi.PsiFileBase
 import com.intellij.openapi.fileTypes.FileType
 import com.intellij.psi.FileViewProvider
