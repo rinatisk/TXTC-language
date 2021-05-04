@@ -15,7 +15,7 @@ import com.intellij.patterns.PlatformPatterns
 import com.intellij.util.ProcessingContext
 
 object Util {
-    fun resource(name: String) = this.javaClass.getResource(name).readText()
+    fun readFromResource(name: String) = this.javaClass.getResource(name).readText()
 }
 
 class TxtcCompletionContributor : CompletionContributor() {
@@ -54,7 +54,7 @@ class TxtcCompletionContributor : CompletionContributor() {
     }
 
     private fun parseWords(name: String): List<Collection<String>>? {
-        val wordsFile = Util.resource(name)
+        val wordsFile = Util.readFromResource(name)
         val wordsWithUses = Klaxon().parseArray<Map<String, String>>(wordsFile)
         return wordsWithUses?.map { it.values }
     }
