@@ -1,12 +1,14 @@
 # TXTC-language
 
 ![Build](https://github.com/rinatisk/TXTC-language/workflows/Build/badge.svg)
+<!-- Plugin description -->
 
 Плагин, определяющий язык TXTC -- plain text + для введённого появляется список английских слов, начинающихся с этой подстроки, которые отсортированы по частоте использования.
 Справа от каждого предлагаемого слова указана частота встречаемости.
 ![Work Demo](src/main/resources/demo/demo.gif)
 
 Частотный словарь хранится в виде json файла и парсится с помощью [Klaxon](https://github.com/cbeust/klaxon)
+<!-- Plugin description end -->
 
 Установка:
 - 
