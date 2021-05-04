@@ -12,9 +12,6 @@ public interface SimpleTypes {
 
   IElementType PROPERTY = new SimpleElementType("PROPERTY");
 
-  IElementType COMMENT = new SimpleTokenType("COMMENT");
-  IElementType CRLF = new SimpleTokenType("CRLF");
-  IElementType KEY = new SimpleTokenType("KEY");
   IElementType SEPARATOR = new SimpleTokenType("SEPARATOR");
   IElementType VALUE = new SimpleTokenType("VALUE");
 

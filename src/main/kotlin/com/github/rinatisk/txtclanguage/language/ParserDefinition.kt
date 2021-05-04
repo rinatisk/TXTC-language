@@ -27,7 +27,7 @@ class SimpleParserDefinition : ParserDefinition {
     }
 
     override fun getCommentTokens(): TokenSet {
-        return COMMENTS
+        return TokenSet.ANY
     }
 
     override fun getStringLiteralElements(): TokenSet {
@@ -56,7 +56,6 @@ class SimpleParserDefinition : ParserDefinition {
 
     companion object {
         val WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE)
-        val COMMENTS = TokenSet.create(SimpleTypes.COMMENT)
         val FILE = IFileElementType(SimpleLanguage.INSTANCE)
     }
 }

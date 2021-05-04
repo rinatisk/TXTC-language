@@ -15,6 +15,6 @@
 
 simpleFile ::= item_*
 
-private item_ ::= (property|COMMENT|CRLF)
+private item_ ::= property
 
-property ::= (KEY? SEPARATOR VALUE?) | KEY
+property ::= (VALUE? SEPARATOR VALUE?) | VALUE
