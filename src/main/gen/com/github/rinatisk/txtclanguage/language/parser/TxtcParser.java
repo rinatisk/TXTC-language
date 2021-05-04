@@ -1,9 +1,9 @@
 // This is a generated file. Not intended for manual editing.
-package org.intellij.sdk.language.parser;
+package com.github.rinatisk.txtclanguage.language.parser;
 
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
-import static org.intellij.sdk.language.psi.SimpleTypes.*;
+import static com.github.rinatisk.txtclanguage.language.psi.TxtcTypes.*;
 import static com.intellij.lang.parser.GeneratedParserUtilBase.*;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.lang.ASTNode;
@@ -12,7 +12,7 @@ import com.intellij.lang.PsiParser;
 import com.intellij.lang.LightPsiParser;
 
 @SuppressWarnings({"SimplifiableIfStatement", "UnusedAssignment"})
-public class SimpleParser implements PsiParser, LightPsiParser {
+public class TxtcParser implements PsiParser, LightPsiParser {
 
   public ASTNode parse(IElementType t, PsiBuilder b) {
     parseLight(t, b);
