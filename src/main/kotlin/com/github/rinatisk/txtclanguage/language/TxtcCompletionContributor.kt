@@ -18,10 +18,6 @@ object Util {
     fun resource(name: String) = this.javaClass.getResource(name).readText()
 }
 
-fun main() {
-    println(Util.resource("dictionary.json"))
-}
-
 class TxtcCompletionContributor : CompletionContributor() {
 
     private val suffixToDrop = 20
