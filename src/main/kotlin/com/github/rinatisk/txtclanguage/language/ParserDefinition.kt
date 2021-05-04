@@ -27,7 +27,7 @@ class SimpleParserDefinition : ParserDefinition {
     }
 
     override fun getCommentTokens(): TokenSet {
-        return TokenSet.ANY
+        return TokenSet.EMPTY
     }
 
     override fun getStringLiteralElements(): TokenSet {

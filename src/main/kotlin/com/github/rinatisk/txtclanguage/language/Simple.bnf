@@ -17,4 +17,4 @@ simpleFile ::= item_*
 
 private item_ ::= property
 
-property ::= (VALUE? SEPARATOR VALUE?) | VALUE
+property ::= (VALUE? WHITE_SPACES VALUE?) | VALUE

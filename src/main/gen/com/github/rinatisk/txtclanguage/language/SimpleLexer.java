@@ -54,7 +54,8 @@ class SimpleLexer implements FlexLexer {
 
   /* The ZZ_CMAP_A table has 320 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\11\0\1\4\1\2\1\1\1\5\1\3\22\0\1\4\73\0\1\6\50\0\1\1\242\0\2\1\26\0");
+    "\11\0\1\3\1\2\1\1\1\4\1\1\22\0\1\6\73\0\1\7\21\0\1\5\26\0\1\1\242\0\2\1\26"+
+    "\0");
 
   /** 
    * Translates DFA states to action switch labels.
@@ -62,11 +63,10 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\3\1\1\2\1\3\1\1\2\4\1\0\1\1"+
-    "\1\2\1\4";
+    "\1\0\3\1\1\2\2\3\1\1\4\4\1\0\1\2";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[13];
+    int [] result = new int[14];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -91,11 +91,11 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\7\0\16\0\25\0\34\0\43\0\52\0\34"+
-    "\0\61\0\43\0\70\0\52\0\77";
+    "\0\0\0\10\0\20\0\30\0\40\0\50\0\60\0\70"+
+    "\0\70\0\100\0\40\0\110\0\60\0\70";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[13];
+    int [] result = new int[14];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -118,16 +118,15 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\3\1\4\1\5\2\4\1\5\1\6\1\3\1\7"+
-    "\1\10\1\7\1\11\1\10\1\6\2\3\1\0\2\3"+
-    "\1\0\1\12\1\3\1\4\1\5\2\4\1\5\1\12"+
-    "\1\0\5\5\1\0\3\3\1\13\4\3\1\14\1\5"+
-    "\2\14\1\5\1\12\1\3\1\4\1\15\1\4\1\11"+
-    "\1\15\1\12\5\3\1\0\1\12\1\0\1\5\1\15"+
-    "\1\5\2\15\1\0";
+    "\1\3\3\4\1\5\1\6\1\5\1\7\1\3\1\10"+
+    "\1\11\1\12\1\13\1\6\1\14\1\7\4\3\3\0"+
+    "\1\15\1\3\3\4\1\5\1\0\1\5\1\15\1\0"+
+    "\4\5\1\0\1\5\11\0\11\3\3\16\1\5\1\0"+
+    "\1\5\1\15\1\3\1\4\2\12\1\14\1\0\1\14"+
+    "\1\15\1\0\1\5\3\14\1\0\1\14\1\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[70];
+    int [] result = new int[80];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -165,10 +164,10 @@ class SimpleLexer implements FlexLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\10\1\1\0\3\1";
+    "\1\0\4\1\1\11\6\1\1\0\1\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[13];
+    int [] result = new int[14];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;

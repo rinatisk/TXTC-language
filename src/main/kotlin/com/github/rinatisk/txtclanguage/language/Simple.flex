@@ -17,7 +17,7 @@ import com.intellij.psi.TokenType;
 
 CRLF=\R
 WHITE_SPACE=[\ \n\t\f]
-VALUE_CHARACTER=[^\n\f\\] | "\\"{CRLF} | "\\".
+VALUE_CHARACTER=[^\ \\n\f\\] | "\\"{CRLF} | "\\".
 
 %state WAITING_VALUE
 

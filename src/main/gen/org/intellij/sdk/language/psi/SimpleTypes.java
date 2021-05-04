@@ -12,8 +12,8 @@ public interface SimpleTypes {
 
   IElementType PROPERTY = new SimpleElementType("PROPERTY");
 
-  IElementType SEPARATOR = new SimpleTokenType("SEPARATOR");
   IElementType VALUE = new SimpleTokenType("VALUE");
+  IElementType WHITE_SPACES = new SimpleTokenType("WHITE_SPACES");
 
   class Factory {
     public static PsiElement createElement(ASTNode node) {

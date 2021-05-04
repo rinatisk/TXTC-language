@@ -42,10 +42,10 @@ public class SimpleParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // (VALUE? SEPARATOR VALUE?) | VALUE
+  // (VALUE? WHITE_SPACES VALUE?) | VALUE
   public static boolean property(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "property")) return false;
-    if (!nextTokenIs(b, "<property>", SEPARATOR, VALUE)) return false;
+    if (!nextTokenIs(b, "<property>", VALUE, WHITE_SPACES)) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, PROPERTY, "<property>");
     r = property_0(b, l + 1);
@@ -54,13 +54,13 @@ public class SimpleParser implements PsiParser, LightPsiParser {
     return r;
   }
 
-  // VALUE? SEPARATOR VALUE?
+  // VALUE? WHITE_SPACES VALUE?
   private static boolean property_0(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "property_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = property_0_0(b, l + 1);
-    r = r && consumeToken(b, SEPARATOR);
+    r = r && consumeToken(b, WHITE_SPACES);
     r = r && property_0_2(b, l + 1);
     exit_section_(b, m, null, r);
     return r;
